@@ -760,22 +760,106 @@ h3.my-profession {
     height: 50px;
     padding: 0 50px;
 }
-@media (max-width:1199px) {
+/* aside part */
+#menuBtn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--skin-color);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 90px;
+    box-shadow: 0 0 20 rgba(0, 0, 0, 20%);
+    display: none;
+    z-index: 999;
+}
+
+
+@media only screen and (max-width: 1199px) {
     .aside {
-        left: -270px;
+        left: -300px;
     }
 
     .main-content {
         padding-left: 0;
     }
 
-    .about .about-content .personal-info .info-item p span {
+    #menuBtn {
         display: block;
-        margin-left: 0;
     }
 }
 
- @media (max-width:991px) {
+.mobile-nav-active .aside {
+    left: 0;
+
+}
+
+/* home section */
+@media only screen and (max-width: 676px) {
+    #home {
+        padding: 30px;
+    }
+
+    #home .home-info h3 {
+        font-size: 35px;
+        letter-spacing: 0;
+        line-height: 50px;
+    }
+
+    #home .home-info p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    #home .home-img {
+        display: none;
+    }
+}
+
+/* about section */
+@media only screen and (max-width: 830px) {
+    #about {
+        padding: 50px 10px;
+    }
+
+    #about .about-content {
+        font-size: 14px;
+        letter-spacing: 0;
+        text-align: justify;
+    }
+
+    #about .about-content .personal-info .col .info-item {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #about .about-content .personal-info .info-item p {
+
+        font-size: 14px;
+        letter-spacing: 0px;
+
+    }
+
+    #about .about-content .skills {
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+
+    #about .about-content .personal-info,
+    #about .about-content .skills,
+    #about .about-content .experience,
+    #about .about-content .education {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
+/* Service, portfolio, contact  section  */
+@media only screen and (max-width:830px) {
 
     .contact .contact-info-item,
     .portfolio .portfolio-item,
@@ -783,28 +867,15 @@ h3.my-profession {
         flex: 0 0 50%;
         max-width: 50%;
     }
-   
-    .home.home-info {
-        flex: 0 0 100%;
-        max-width: 100%;
-    } 
-
-    .home .home-img {
-        display: none;
-    }
 }
 
 @media (max-width:767px) {
 
-   
-    .about .about-content .experience,
-    .about .about-content .education,
-    .about .about-content .skills, 
-    .about .about-content .personal-info,
     .service .service-item,
-    .portfolio .portfolio-item, .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .contact .contact-info-item,
     .contact .contact-form .col-6 {
         flex: 0 0 100%;
         max-width: 100%;
     }
-} 
+}
